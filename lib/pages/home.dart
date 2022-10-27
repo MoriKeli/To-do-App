@@ -9,6 +9,18 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  List toDolist = [
+    ["Make tutorial", false],
+    ["Do exercise", false],
+  ];
+
+  void checkboxChanged(bool? value, int index) {
+    setState(() {
+      toDolist[index][1] = !toDolist[index][1];
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,23 +29,15 @@ class _HomeState extends State<Home> {
         title: Text('To-do App'),
         centerTitle: true,
       ),
-      body: ListView(
-        children: [
-          ToDoTile(
-            taskName: "Make Tutorial",
-            taskCompleted: true,
-            onChanged: (p0) {
-
-            },
-          ),
-          ToDoTile(
-            taskName: "Attend class",
-            taskCompleted: false,
-            onChanged: (p0) {
-              
-            },
-          ),
-        ],
+      body: ListView.builder(
+        itemCount: toDolist.length,
+        itemBuilder: (context, index) {
+          return ToDoTile(
+            taskName: toDolist[index][0], 
+            taskCompleted: toDolist[index][1], 
+            onChanged: (value) => checkboxChanged(value, index),
+          );
+        },
       )
     );
   }
