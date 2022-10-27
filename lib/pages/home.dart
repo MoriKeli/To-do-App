@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:new_app/utils/todo_tile.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -17,7 +18,9 @@ class _HomeState extends State<Home> {
         centerTitle: true,
       ),
       body: ListView(
-        
+        children: [
+          ToDoTile(),
+        ],
       )
     );
   }
