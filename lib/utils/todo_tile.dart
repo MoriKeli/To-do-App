@@ -9,7 +9,14 @@ class ToDoTile extends StatelessWidget {
       padding: const EdgeInsets.all(25.0),
       child: Container(
         padding: EdgeInsets.all(25.0),
-        child: Text('Make tutorial'),
+        child: Row(
+          children: [
+            // checkbox
+            Checkbox(value: value, onChanged: onChanged)
+
+            Text('Make tutorial'),
+          ],
+        ),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(12.0),
