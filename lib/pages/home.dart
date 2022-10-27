@@ -19,7 +19,20 @@ class _HomeState extends State<Home> {
       ),
       body: ListView(
         children: [
-          ToDoTile(),
+          ToDoTile(
+            taskName: "Make Tutorial",
+            taskCompleted: true,
+            onChanged: (p0) {
+
+            },
+          ),
+          ToDoTile(
+            taskName: "Attend class",
+            taskCompleted: false,
+            onChanged: (p0) {
+              
+            },
+          ),
         ],
       )
     );
