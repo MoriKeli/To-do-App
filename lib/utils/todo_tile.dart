@@ -16,7 +16,7 @@ ToDoTile({
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(25.0),
+      padding: const EdgeInsets.fromLTRB(25.0, 15.0, 25.0, 0),
       child: Container(
         padding: EdgeInsets.all(25.0),
         child: Row(
