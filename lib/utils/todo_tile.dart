@@ -5,6 +5,16 @@ class ToDoTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Padding(
+      padding: const EdgeInsets.all(24.0),
+      child: Container(
+        padding: ,
+        child: Text('Make tutorial'),
+        decoration: BoxDecoration(
+          color: Colors.grey[900],
+          
+        ),
+      ),
+    );
   }
 }
