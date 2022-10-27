@@ -10,6 +10,12 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: Colors.grey[500],
+      appBar: AppBar(
+        title: Text('To-do App'),
+        centerTitle: true,
+      ),
+    );
   }
 }
