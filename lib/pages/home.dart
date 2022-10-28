@@ -24,12 +24,22 @@ class _HomeState extends State<Home> {
     });
   }
 
+  void saveNewTask() {
+    setState(() {
+      toDolist.add([_controller.text, false]);
+      _controller.clear();
+    });
+    Navigator.of(context).pop();
+  }
+
   void createNewTask() {
     showDialog(
       context: context,
       builder: (context) {
         return DialogBox(
           controller: _controller,
+          onSave: saveNewTask,
+          onCancel: () => Navigator.of(context).pop(),
         );
       }
     );
