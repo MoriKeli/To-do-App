@@ -24,7 +24,14 @@ ToDoTile({
             // checkbox
             Checkbox(value: taskCompleted, onChanged: onChanged),
 
-            Text(taskName),
+            Text(
+              taskName,
+              style: TextStyle(
+                fontSize: 20.0,
+                decoration: taskCompleted ? TextDecoration.lineThrough : TextDecoration.none,
+
+              ),
+              ),
           ],
         ),
         decoration: BoxDecoration(
