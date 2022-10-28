@@ -38,8 +38,14 @@ class _HomeState extends State<Home> {
             onChanged: (value) => checkboxChanged(value, index),
           );
         },
-      )
-      
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          child: Icon(
+            Icons.add
+          );
+        },
+      ),
     );
   }
 }
