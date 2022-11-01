@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -9,7 +10,8 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   Widget topWidget(double screenWidth) {
-    return Transform(
+    return Transform.rotate(
+      angle: -35 * math.pi /180,
       child: Container(
         width: 1.2 * screenWidth,
         height: 1.2 * screenWidth,
