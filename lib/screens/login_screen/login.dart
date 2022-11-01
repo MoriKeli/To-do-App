@@ -29,6 +29,13 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
+
+  Widget bottomWidget(double screenWidth) {
+    return Container(
+      
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
@@ -39,7 +46,8 @@ class _LoginScreenState extends State<LoginScreen> {
             top: -160,
             left: -30,
             child: topWidget(screenSize.width),
-            ),
+          ),
+          bottomWidget(screenSize.width),
         ],
       ),
     );
