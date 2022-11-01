@@ -64,6 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
             left: -40,
             child: bottomWidget(screenSize.width),
           ),
+          Centerwidget(size: screenSize),
         ],
       ),
     );
