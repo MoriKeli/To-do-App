@@ -21,8 +21,8 @@ class _LoginScreenState extends State<LoginScreen> {
             begin: Alignment(-0.2, -0.8),
             end: Alignment.bottomCenter,
             colors: [
-              Color(0x007CBFCF),
-              Color(0xB316BFC4),
+              Color.fromRGBO(124, 191, 207, 0),
+              Color.fromRGBO(22, 191, 196, 0.702),
             ],
           ),
         ),
@@ -32,7 +32,19 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget bottomWidget(double screenWidth) {
     return Container(
-      
+      width: 1.5 * screenWidth,
+      height: 1.5 * screenWidth,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        gradient: LinearGradient(
+          begin: Alignment(0.6, -1.1),
+          end: Alignment(0.7, 0.8),
+          colors: [
+            Color.fromRGBO(75, 232, 204, 0.859),
+            Color.fromARGB(0, 92, 219, 207),
+          ]
+        ),
+      ),
     );
   }
 
