@@ -59,7 +59,11 @@ class _LoginScreenState extends State<LoginScreen> {
             left: -30,
             child: topWidget(screenSize.width),
           ),
-          bottomWidget(screenSize.width),
+          Positioned(
+            bottom: -180,
+            left: -40,
+            child: bottomWidget(screenSize.width),
+          ),
         ],
       ),
     );
