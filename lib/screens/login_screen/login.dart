@@ -8,8 +8,18 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  Widget topWidget(double screenWidth) {
+    return Container();
+  }
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    final screenSize = MediaQuery.of(context).size;
+    return Scaffold(
+      body: Stack(
+        children: [
+          topWidget(screenSize.width)
+        ],
+      ),
+    );
   }
 }
