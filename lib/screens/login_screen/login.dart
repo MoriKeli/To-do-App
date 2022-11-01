@@ -35,7 +35,11 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          Positioned(child: topWidget(screenSize.width))
+          Positioned(
+            top: -160,
+            left: -30,
+            child: topWidget(screenSize.width),
+            ),
         ],
       ),
     );
